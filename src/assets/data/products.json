@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "NVIDIA GeForce RTX 4090",
+    "price": 1599.99,
+    "description": "La tarjeta gráfica definitiva para gaming y creación.",
+    "category": "Componentes",
+    "image": "https://m.media-amazon.com/images/I/71uGqR-O6tL._AC_SL1500_.jpg",
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "title": "Intel Core i9-14900K",
+    "price": 589.99,
+    "description": "Procesador de 24 núcleos para el máximo rendimiento.",
+    "category": "Componentes",
+    "image": "https://m.media-amazon.com/images/I/61kYm60R-8L._AC_SL1500_.jpg",
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "title": "Monitor Samsung Odyssey G9",
+    "price": 1299.99,
+    "description": "Monitor ultrapanorámico 49 pulgadas 240Hz.",
+    "category": "Monitores",
+    "image": "https://m.media-amazon.com/images/I/8106-YmR-CL._AC_SL1500_.jpg",
+    "inStock": false
+  },
+  {
+    "id": 4,
+    "title": "Teclado Logitech G915 TKL",
+    "price": 229.99,
+    "description": "Teclado inalámbrico mecánico de perfil bajo.",
+    "category": "Periféricos",
+    "image": "https://m.media-amazon.com/images/I/71G1M-r2v0L._AC_SL1500_.jpg",
+    "inStock": true
+  },
+  {
+    "id": 5,
+    "title": "Ratón Razer DeathAdder V3 Pro",
+    "price": 159.99,
+    "description": "El ratón de eSports más ligero y preciso.",
+    "category": "Periféricos",
+    "image": "https://m.media-amazon.com/images/I/51A9A+A779L._AC_SL1200_.jpg",
+    "inStock": true
+  },
+  {
+    "id": 6,
+    "title": "ASUS ROG Maximus Z790 Hero",
+    "price": 649.99,
+    "description": "Placa base premium con soporte DDR5 y PCIe 5.0.",
+    "category": "Componentes",
+    "image": "https://m.media-amazon.com/images/I/81I3i7zS2UL._AC_SL1500_.jpg",
+    "inStock": true
+  }
+]

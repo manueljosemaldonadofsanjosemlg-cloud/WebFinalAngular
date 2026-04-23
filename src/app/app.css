@@ -1,0 +1,303 @@
+.app-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background System */
+.bg-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bg-gradient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(30, 30, 30, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%);
+    z-index: 1;
+}
+
+.bg-particles {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(5vh);
+    animation: float 15s infinite ease-in-out;
+}
+
+.particle:nth-child(even) {
+    animation-duration: 20s;
+    animation-delay: -5s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+    25%       { transform: translate(5vh, -8vh) scale(1.2); opacity: 0.5; }
+    50%       { transform: translate(-3vh, -15vh) scale(0.9); opacity: 0.4; }
+    75%       { transform: translate(-8vh, -10vh) scale(1.1); opacity: 0.6; }
+}
+
+/* Paneles */
+.main-panel {
+    width: 90vw;
+    height: 85vh;
+    background: rgba(0, 0, 0, 0.6);
+    border: 0.1vh solid rgba(255, 255, 255, 0.1);
+    border-radius: 1vh;
+    padding: 3vh;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    outline: 0.1vh dashed rgba(255, 255, 255, 0.12);
+    outline-offset: 0.25vh;
+    animation: fadeIn 0.6s var(--cubic) backwards;
+    overflow: hidden;
+}
+
+.render-area {
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(2vh); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1vh solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 1.5vh;
+}
+
+.section-title {
+    font-size: 2.2vh;
+    display: flex;
+    align-items: center;
+    gap: 1.5vh;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.icon-box {
+    width: 4.5vh;
+    height: 4.5vh;
+    background: rgba(255, 255, 255, 0.08);
+    border: 0.1vh solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.icon-box-md {
+    width: 6vh;
+    height: 6vh;
+    background: rgba(255, 255, 255, 0.05);
+    border: 0.1vh solid rgba(255, 255, 255, 0.1);
+    border-radius: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5vh;
+}
+
+.back-button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 0.1vh solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 1vh 2vh;
+    border-radius: 0.8vh;
+    font-size: 1.2vh;
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.back-button:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Grid Layout */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2vh;
+    flex: 1;
+    overflow: hidden;
+}
+
+.left-col, .right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.content-panel {
+    background: rgba(255, 255, 255, 0.02);
+    border: 0.1vh solid rgba(255, 255, 255, 0.08);
+    border-radius: 0.8vh;
+    padding: 1.8vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+.full-height {
+    flex: 1;
+    overflow: hidden;
+}
+
+.section-subtitle {
+    font-size: 1.5vh;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.2vh;
+    border-left: 0.3vh solid rgba(255, 255, 255, 0.3);
+    padding-left: 1.5vh;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vh;
+}
+
+.action-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 0.1vh solid rgba(255, 255, 255, 0.06);
+    border-radius: 0.8vh;
+    padding: 1.5vh;
+    text-decoration: none;
+    transition: all 0.3s var(--cubic);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.action-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-0.2vh);
+}
+
+.card-text {
+    font-size: 1vh;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Chips */
+.module-chips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vh;
+}
+
+.chip {
+    background: rgba(255, 255, 255, 0.04);
+    border: 0.1vh solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.7vh;
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vh;
+}
+
+.chip-label {
+    font-size: 0.8vh;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.chip-value {
+    font-size: 1.1vh;
+    color: white;
+}
+
+/* List Items */
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vh;
+    overflow-y: auto;
+    padding-right: 0.5vh;
+}
+
+.list-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 0.1vh solid rgba(255, 255, 255, 0.05);
+    border-radius: 0.6vh;
+    padding: 1vh;
+    display: flex;
+    align-items: center;
+    gap: 1.2vh;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-size: 1vh;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.item-sub {
+    font-size: 0.8vh;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.status-dot {
+    width: 0.8vh;
+    height: 0.8vh;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.status-dot.active {
+    background: white;
+    box-shadow: 0 0 1vh white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.5; }
+}
+
+.margin-top {
+    margin-top: auto;
+}
