@@ -14,7 +14,7 @@ export class ProductService {
     this.productsSignal().filter(p => p.inStock)
   );
 
-  private readonly STORAGE_KEY = 'origen_inventory_overrides';
+  private readonly STORAGE_KEY = 'app_inventory_overrides';
 
   constructor(private http: HttpClient) {
     this.loadProducts();

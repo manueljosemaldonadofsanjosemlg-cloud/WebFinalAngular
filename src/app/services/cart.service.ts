@@ -14,7 +14,7 @@ export class CartService {
 
   public showCart = signal(false);
 
-  private readonly STORAGE_KEY = 'origen_cart_data';
+  private readonly STORAGE_KEY = 'app_cart_data';
 
   constructor() {
     this.loadCart();

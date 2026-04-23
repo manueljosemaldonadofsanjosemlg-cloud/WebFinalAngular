@@ -2,7 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/roboto-condensed');
 
 :root {
-    /* Origen NUI Palette */
+    /* Global Color Palette */
     --primary-color: rgba(255, 255, 255, 0.18);
     --color-acent:   rgba(255, 255, 255, 0.28);
     --text-white:    #ffffff;

@@ -20,7 +20,7 @@ export class AuthService {
     { username: 'user', password: 'user123', role: 'CLIENTE', fullName: 'Usuario Demo' }
   ];
 
-  private readonly STORAGE_KEY = 'origen_session_data';
+  private readonly STORAGE_KEY = 'app_session_data';
 
   private currentRoleSignal = signal<UserRole>(this.getInitialRole());
   private currentUserSignal = signal<User | null>(this.getInitialUser());
